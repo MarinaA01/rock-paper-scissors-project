@@ -1,17 +1,21 @@
 var wins = 0;
 var ties = 0;
 var losses = 0;
+
+// Array of Options for computer to choose from.
 var options = ["R", "P", "S"];
 
 var playGame = function () {
+    // Ask User for their Choice
     var userChoice = window.prompt("Enter R, P, or S to play.");
+    // If User Pressed cancel, end function.
     if (!userChoice) {
         return;
-    };
+    }
 
     userChoice = userChoice.toUpperCase();
     var index = Math.floor(Math.random() * options.length);
-    var computerChoice = options(index);
+    var computerChoice = options[index];
 
     window.alert("The computer chose " + computerChoice);
 
@@ -40,7 +44,7 @@ var playGame = function () {
     var playAgain = window.confirm("Play again?");
 
     if (playAgain) {
-        function playGame();
+        playGame();
     }
 };
 
@@ -48,4 +52,4 @@ var playGame = function () {
 
 
 
-function playGame();
+playGame();
